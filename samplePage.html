@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <style>
+	table.main {
+	    border-collapse: collapse;
+	}
+	table.main,
+	table.main th,
+	table.main td {
+	    border: 1px #000000 solid;
+	    padding: 3px;
+	}
+    </style>
+    <title>供給照会入力画面</title>
+    <script src="mailTrigger.js" type="text/javascript" charset="utf-8" ></script>
+</head>
+<body>
+・以下に入力した後、作成されるメールをそのまま送信してください<br>
+（供給可否のメールが返信されます）<br>
+・入力は数字のみ<br>
+注）IEでは動作しません。
+<hr>
+    <input type="hidden" id="hidden_data" value="送信したい情報をここに記載">
+    <p>引込柱番号<font color="Red">[必須]</font><input type="tel" id="no" size="12" maxlength="12">
+    <p>契約種別<font color="Red">[必須]</font>
+    <select id="ks">
+	<option value="1">一般電灯（下記以外）</option>
+	<option value="2">街灯・信号</option>
+	<option value="3">ロードヒーティング・暖房専用契約</option>
+	<option value="4">動力</option>
+    </select>
+<p>容量<font color="Red">[新設/増加いずれか必須]</font>
+<table border="1" class="main">
+<tr>
+	<td colspan="2" align="center">区分</td><td align="center">容量</td><td align="center">単位</td>
+<tr>
+	<td colspan="2" align="center">新設</td>
+	<td><input type="tel" id="kw" size="4" maxlength="4">
+	<td><select id="unit1">
+	    <option value="A">A</option>
+	    <option value="kVA">kVA</option>
+	    <option value="kW">kW</option>
+	    <option value="VA">VA</option>
+	    <option value="W">W</option>
+	</select></td></tr>
+<tr>
+	<td rowspan=2>増加</td>
+	<td>増加前</td>
+	<td><input type="tel" id="mae" size="4" maxlength="4">
+	<td><select id="unit2">
+	    <option value="A">A</option>
+	    <option value="kVA">kVA</option>
+	    <option value="kW">kW</option>
+	    <option value="VA">VA</option>
+	    <option value="W">W</option>
+	</select></td></tr>
+<tr>
+	<td>増加後</td>
+	<td><input type="tel" id="ato" size="4" maxlength="4">
+	<td><select id="unit3">
+	    <option value="A">A</option>
+	    <option value="kVA">kVA</option>
+	    <option value="kW">kW</option>
+	    <option value="VA">VA</option>
+	    <option value="W">W</option>
+	</select></td></tr>
+</table>
+    <p>電気方式<font color="Red">[必須]</font>
+    <select id="phase">
+	<option value="131">単相3線100V</option>
+	<option value="121">単相2線100V</option>
+	<option value="122">単相2線200V</option>
+	<option value="332">三相3線200V</option>
+    </select>
+    <p><button id="mail">メール起動</button>
+</body>
+</html>
