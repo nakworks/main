@@ -18,6 +18,16 @@
     </style>
     <title>供給照会入力画面</title>
     <script src="mailTrigger.js" type="text/javascript" charset="utf-8" ></script>
+    <script>
+	if ('serviceWorker' in navigator) {
+	  navigator.serviceWorker.register('/sw.js', { scope: '/' })
+  	.then(function(reg) {
+	    console.log('登録に成功しました。 Scope は ' + reg.scope);
+	  }).catch(function(error) {
+	    console.log('登録に失敗しました。' + error);
+	  });
+	}
+    </script>
 </head>
 <body>
 ・以下に入力した後、作成されるメールをそのまま送信してください<br>
