@@ -1,7 +1,7 @@
 var CACHE_NAME = 'pwa-sample-caches';
 var urlsToCache = [
-    '/pwa/',
-    '/pwa/mailTrigger.js'
+    '/shokai/',
+    '/shokai/mailTrigger.js'
 ];
 
 // インストール処理
