@@ -1,6 +1,6 @@
 var CACHE_NAME = 'pwa-sample-caches';
 var urlsToCache = [
-    '/',
+    '/samplePage.html',
     '/mailTrigger.js',
     'images/icon1.png',
     'images/icon2.png'
