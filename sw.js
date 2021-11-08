@@ -1,9 +1,9 @@
 var CACHE_NAME = 'pwa-sample-caches';
 var urlsToCache = [
-    '.',
-    'mailTrigger.js'
-    'images/icon1.png'
-    'images/icon2.png'
+    '/',
+    '/mailTrigger.js'
+    '/images/icon1.png'
+    '/images/icon2.png'
 ];
 
 // インストール処理
